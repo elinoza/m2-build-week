@@ -97,9 +97,11 @@ body{
   }
 
   .card{ width:150px;
+    ;
 object-fit: cover; }
 .card img {
     object-fit:cover;
+    height:25vh;
 }
  
 
@@ -111,8 +113,7 @@ object-fit: cover; }
     left:0;
     background-color: #282828;
   }
-  .albumImage {
-  }
+
   .footerText {
     color: white;
     font-size: 12px;
@@ -126,4 +127,3 @@ object-fit: cover; }
     margin-left: 80px;
     margin-right: 80px;
   }
-  #infos 
