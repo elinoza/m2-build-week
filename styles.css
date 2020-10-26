@@ -1,19 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@600&display=swap');
+.btn-sign,
+.btn-login,
+body{
+  font-family:proxima-nova,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+}
 .nav{
-    background-color:#191414;
+    background-color:black;
     z-index: 3;
     width: 235px;    
     margin: 0 !important;
     position:fixed;
     top:0px;
     left:0px;
-    bottom:0px;
-
+    bottom:0px;   
+  }
+  .playlist{
+    font-weight: 600;
+    font-size: 13px;
   }
   .nav a{
-    font-weight: 500;
-    color: grey;
+    font-weight: 600;
+    color: rgb(158, 158, 158);
+    font-size: 15px;
   }
   .title{
     box-sizing: border-box;
-    width: 140px;
+    width: 135px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 9px;
+  }
+
+  li a:hover{
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
+
+  li a:active{
+    background-color: rgba(128, 128, 128, 0.336);
+    border-radius: 10px;
+  }
+  .btn-login,
+  .btn-sign{
+    border-radius: 18px;
+    border: solid white;
+    font-size: 14px;
+  }
+  .btn-login:hover{
+    background-color: #1DB954;
+    transition: 0.7s ease-in-out;
+    color: black;
+  }
+  .btn-sign:hover{
+    background-color: #1DB954;
+    transition: 0.7s ease-in-out;
+    color: white;
+  }
+  .btn-sign{
+    padding:4px;
+    bottom: 65px;
+    position: fixed;
+    left: 10px;
+    width: initial;
+    width: 17%;
+    background-color: white;
+  }
+  .btn-login{
+    padding:4px;
+    bottom: 20px;
+    position: fixed;
+    left: 10px;
+    width: initial;
+    width: 17%;
+    background-color: black;
+    color: white;
   }
