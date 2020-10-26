@@ -78,3 +78,21 @@ body{
     background-color: black;
     color: white;
   }
+  .nowPlaying {
+    background-color: #282828;
+  }
+  .albumImage {
+  }
+  .footerText {
+    color: white;
+    font-size: 12px;
+  }
+  .footerIcons {
+    background-color: #272727;
+    color: white;
+  }
+  .progressBar {
+    height: 0.2rem;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
