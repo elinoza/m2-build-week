@@ -61,7 +61,7 @@ body{
   }
   .btn-sign{
     padding:4px;
-    bottom: 65px;
+    bottom: 90px;
     position: fixed;
     left: 10px;
     width: initial;
@@ -70,7 +70,7 @@ body{
   }
   .btn-login{
     padding:4px;
-    bottom: 20px;
+    bottom: 50px;
     position: fixed;
     left: 10px;
     width: initial;
