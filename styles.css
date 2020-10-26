@@ -71,20 +71,20 @@ body{
   }
   .btn-sign{
     padding:4px;
-    bottom: 130px;
-    position: fixed;
-    left: 10px;
-    width: initial;
-    width: 10%;
-    background-color: white;
-  }
-  .btn-login{
-    padding:4px;
     bottom: 90px;
     position: fixed;
     left: 10px;
     width: initial;
-    width: 10%;
+    width: 17%;
+    background-color: white;
+  }
+  .btn-login{
+    padding:4px;
+    bottom: 50px;
+    position: fixed;
+    left: 10px;
+    width: initial;
+    width: 17%;
     background-color: black;
     color: white;
   }
@@ -105,6 +105,7 @@ object-fit: cover; }
 }
  
 
+<<<<<<< HEAD
   .nowPlaying {
     z-index: 999;
     position: fixed;
@@ -127,3 +128,5 @@ object-fit: cover; }
     margin-left: 80px;
     margin-right: 80px;
   }
+=======
+>>>>>>> parent of 1f75191... Merge branch 'feature/footer' into develop
