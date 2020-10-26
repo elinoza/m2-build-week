@@ -10,6 +10,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/zqk4trm.css" />
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -42,6 +43,8 @@
     }
     .nowPlaying {
       background-color: #282828;
+    }
+    .albumImage {
     }
     .footerText {
       color: white;
@@ -95,7 +98,7 @@
     </table>
     <footer class="nowPlaying">
       <div class="row">
-        <div class="col-2">
+        <div class="col-2" id="infos">
           <br />
           <label class="footerText"
             >Song Title <span class="fa fa-heart-o"></span></label
@@ -103,7 +106,7 @@
           <label class="footerText">Artist</label>
           <br />
         </div>
-        <div class="col-8">
+        <div class="col-8" id="player">
           <div style="text-align: center; margin-top: 10px">
             <button class="btn footerIcons">
               <span class="fa fa-random"></span>
@@ -137,7 +140,7 @@
             </div>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-2" id="options">
           <br />
           <button class="btn footerIcons">
             <span class="fa fa-list"></span>
