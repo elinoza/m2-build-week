@@ -97,11 +97,11 @@ body{
   }
 
   .card{ width:150px;
-    ;
+    
 object-fit: cover; }
 .card img {
     object-fit:cover;
-    height:20vh;
+  
 }
  
 
