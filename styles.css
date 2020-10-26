@@ -1,0 +1,18 @@
+.nav{
+    background-color:#191414;
+    z-index: 3;    
+    margin: 0 !important;
+    position:fixed;
+    top:0px;
+    left:0px;
+    bottom:0px;
+
+  }
+  .nav a{
+    font-weight: 500;
+    color: grey;
+  }
+  .title{
+    box-sizing: border-box;
+    width: 140px;
+  }
