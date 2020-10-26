@@ -71,20 +71,20 @@ body{
   }
   .btn-sign{
     padding:4px;
-    bottom: 90px;
+    bottom: 130px;
     position: fixed;
     left: 10px;
     width: initial;
-    width: 17%;
+    width: 10%;
     background-color: white;
   }
   .btn-login{
     padding:4px;
-    bottom: 50px;
+    bottom: 90px;
     position: fixed;
     left: 10px;
     width: initial;
-    width: 17%;
+    width: 10%;
     background-color: black;
     color: white;
   }
@@ -103,3 +103,27 @@ object-fit: cover; }
 }
  
 
+  .nowPlaying {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    right:0;
+    left:0;
+    background-color: #282828;
+  }
+  .albumImage {
+  }
+  .footerText {
+    color: white;
+    font-size: 12px;
+  }
+  .footerIcons {
+    background-color: #272727;
+    color: white;
+  }
+  .progressBar {
+    height: 0.2rem;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  #infos 
