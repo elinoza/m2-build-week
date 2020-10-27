@@ -6,6 +6,7 @@ body {
 font-size:14px;
 color:white;
 background-image: linear-gradient(to right, rgb(18,18,18), rgb(7,7,7));
+
 }
 
 h3,h5{font-weight:bold}
@@ -42,7 +43,7 @@ body{
   .nav a{
     font-weight: 600;
     color: rgb(158, 158, 158);
-    font-size: 15px;
+    font-size: 13px;
   }
   
   .title{
@@ -103,23 +104,72 @@ body{
      margin-left: 180px;     
 
   }
-  li{list-style:none
+  ul.tracklist li{
+      list-style:none;
+     margin-bottom:25px;
+     padding:5px;
   }
 
  ul.tracklist p{
      margin:0px;
  }
- ul.tracklist p.subtitle{
+ ul.tracklist p:first-of-type{
+     color:rgb(231, 230, 230)
+ }
+
+ p.subtitle{
     font-size:0.8em;
     color:rgb(158, 158, 158)
+}
+ul.tracklist a{
+    color:rgb(158, 158, 158)
+}
 }
 
 .btn-play{
     background-color:#1db954;
     border-radius: 18px;    
-    font-size: 14px;
+    font-size: 12px;
     color:white;
-    width:20vh;
+         
+}
+.main-part i {
+    
+    color:rgb(158, 158, 158)
+}
+
+i{
+    color:gray;
+    font-size:18px;
+}
+i.heart-shape:hover{
+    color:white
+}
+
+i.three-dots:hover{
+    color:white
+}
+
+div.card-body p:nth-of-type(2).subtitle{
+    cursor:pointer;
+}
+div.card-body p:nth-of-type(2).subtitle:hover {
+    text-decoration:underline;
+    color:white;
+
+}
+.btn-play:hover{
+    padding:100px;
+    box-shadow:10px 10px grey;
+
+
+}
+ul.tracklist li:hover{
+    background-color:rgb(75, 73, 73);
+}
+
+ul.tracklist a:active{
+    background-color:rgb(75, 73, 73);
 }
 
 
