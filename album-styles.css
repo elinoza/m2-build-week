@@ -124,10 +124,10 @@ body{
 ul.tracklist a{
     color:rgb(158, 158, 158)
 }
-}
 
-.btn-play{
-    background-color:#1db954;
+
+button.btn-play {
+    background-color:#1db954 !important;
     border-radius: 18px;    
     font-size: 12px;
     color:white;
@@ -169,14 +169,6 @@ ul.tracklist a:active{
 
 
 
- .nowPlaying {
-  z-index: 999;
-  position: fixed;
-  bottom: 0;
-  right:0;
-  left:0;
-  background-color: #282828;
-}
 
 
 
