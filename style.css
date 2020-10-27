@@ -1,0 +1,170 @@
+.head {
+    border-top: 1px solid #d9dadc;
+    border-bottom: 1px solid #d9dadc;
+    padding: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 80px;
+}
+
+.content {
+    max-width: 420px;
+    margin: auto;
+    font-family: proxima-nova, sans-serif;
+}
+
+.spotify-logo img {
+    height: 50px;
+}
+
+.font-small {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 16px 48px 18px;
+    transition-property: background-color, border-color, color, box-shadow, filter;
+    transition-duration: .3s;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    margin: 5px 0;
+}
+
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+
+}
+
+.btn-facebook:hover {
+    color: #fff;
+    background-color: #3a61b3;
+}
+
+.btn-apple {
+
+    color: #fff;
+    background-color: #000;
+
+
+}
+
+.btn-apple:hover {
+    color: #fff;
+    background-color: #333
+}
+
+.btn-green {
+    color: #fff;
+    background-color: #15883e;
+}
+
+.btn-green:hover {
+    color: #fff;
+    background-color: #1db954;
+}
+
+.btn-sign {
+    color: #616467;
+    box-shadow: inset 0 0 0 2px #616467;
+    background-color: transparent;
+}
+
+.btn-sign:hover {
+    color: #fff;
+    background-color: #616467;
+}
+
+
+.divider {
+    border-top: 1px solid #d9dadc;
+    display: block;
+    line-height: 1px;
+    margin: 15px auto;
+    position: relative;
+    text-align: center;
+}
+
+.divider .divider-title {
+    background: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+
+
+.form-control {
+    margin: 10px 0;
+}
+
+.checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox label {
+    margin-top: 6px;
+}
+
+.tick {
+    color: #15883e;
+
+}
+
+input[type=checkbox]:checked+label::after {
+    content: '';
+    position: absolute;
+    width: 1.2ex;
+    height: 0.4ex;
+    background: rgba(0, 0, 0, 0);
+    top: 0.9ex;
+    left: 0.4ex;
+    border: 3px solid green;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+
+.reset-psw-link {
+    color: #1db954
+}
+
+.reset-psw-link:hover {
+    color: #22d661
+}
+
+.no-account {
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: normal
+}
+
+
+.footer {
+    text-align: center;
+    font-size: 11px;
+}
+
+.footer a {
+    color: #1db954
+}
