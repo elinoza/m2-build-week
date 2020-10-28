@@ -3,9 +3,9 @@
 
 body {
   background:rgb(18,33,52);
-   background: linear-gradient(90deg, rgba(36,69,108,1) 8%, rgba(18,33,52,1) 98%, rgba(5,10,16,1) 100%);
-font-size:14px;
-color:white;}
+  background: linear-gradient(90deg, rgba(36,69,108,1) 8%, rgba(18,33,52,1) 98%, rgba(5,10,16,1) 100%);
+  font-size:14px;
+  color:white;}
 
 h3,h5{font-weight:bold}
 
@@ -18,7 +18,7 @@ h3,h5{font-weight:bold}
 .btn-sign,
 .btn-login,
 body{
-  font-family: 'Cabin', sans-serif;
+    font-family: 'Cabin', sans-serif;
     font-weight: 600;
     
 
@@ -28,8 +28,7 @@ body{
 #side-bar.nav{
     background-color:black;
     z-index: 3;
-      
-    
+    width: 250px;
     position:fixed;
     top:0px;
     left:0px;
@@ -67,6 +66,7 @@ body{
     border-radius: 18px;
     border: solid white;
     font-size: 14px;
+    align-content: center;
   }
   .btn-login:hover{
     background-color: #1DB954;
@@ -81,19 +81,17 @@ body{
   .btn-sign{
     padding:4px;
     bottom: 90px;
-    position: fixed;
+    position: absolute;
     left: 10px;
-    width: initial;
-    width: 17%;
+    width: 12rem;
     background-color: white;
   }
   .btn-login{
     padding:4px;
     bottom: 50px;
-    position: fixed;
+    position: absolute;
     left: 10px;
-    width: initial;
-    width: 17%;
+    width: 12rem;
     background-color: black;
     color: white;
   }
@@ -101,8 +99,6 @@ body{
 
   .main-part {
      margin-left: 180px;
-     
-
   }
 
 
