@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/68fbc1d12b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://use.typekit.net/zqk4trm.css" />
+    <style>
+body { 
+  background: rgb(32, 32, 32) !important;
+  background: linear-gradient(0deg, rgb(20, 20, 20) 46%, rgb(22, 22, 22) 65%, rgb(187, 135, 56) 80%) !important;
+  font-size:14px;
+  color:white;}
+
+#side-bar{
+    background-color:#191414;
+    z-index: 3;   
+  } 
+
+
+.btn-sign,
+.btn-login,
+body{
+  font-family:proxima-nova,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+#side-bar.nav{
+    background-color:black;
+    z-index: 3;
+    width: 250px;    
+    margin: 0 !important;
+    position:fixed;
+    top:0px;
+    left:0px;
+    bottom:0px;   
+  }
+  .nav a{
+    font-weight: 600;
+    color: rgb(158, 158, 158);
+    font-size: 15px;
+  }
+  li a:hover{
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
+
+  li a:active{
+    background-color: rgba(128, 128, 128, 0.336);
+    border-radius: 10px;
+  }
+  .btn-login,
+  .btn-sign{
+    border-radius: 18px;
+    border: solid white;
+    font-size: 14px;
+  }
+  .btn-login:hover{
+    background-color: #1DB954;
+    transition: 0.7s ease-in-out;
+    color: black;
+  }
+  .btn-sign:hover{
+    background-color: #1DB954;
+    transition: 0.7s ease-in-out;
+    color: white;
+  }
+  .btn-sign{
+    padding:4px;
+    bottom: 130px;
+    position: fixed;
+    left: 10px;
+    width: initial;
+    width: 10%;
+    background-color: white;
+  }
+  .btn-login{
+    padding:4px;
+    bottom: 90px;
+    position: fixed;
+    left: 10px;
+    width: initial;
+    width: 10%;
+    background-color: black;
+    color: white;
+  }
+  
+  .nowPlaying {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    right:0;
+    left:0;
+    background-color: #282828;
+  }
+
+  .footerText {
+    color: white;
+    font-size: 12px;
+  }
+  .footerIcons {
+    background-color: #272727;
+    color: white;
+  }
+  .progressBar {
+    height: 0.2rem;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .card{
+    padding: 10px;
+  }
+  .topimg{
+    object-fit: cover;
+    height: 20%;
+    width: inherit;
+    position: inherit;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+.headimg{
+    object-fit: cover;
+    height: 110%;
+    width: inherit;
+    position: inherit;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.detailtop {
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.texttop {
+  position: absolute;
+  bottom: 8px;
+  left: 40px;
+  font-size: 80px;
+}
+.color{
+  background-color:rgb(22, 22, 22);
+}
+p{
+  line-height: 0.5;
+}
+h2:hover{
+  text-decoration: underline;
+}
+h2{
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.row > .card:hover{
+  background-color:rgb(27, 27, 27);
+}
+table{
+  border-collapse: separate;
+  border-spacing: 20px 0;
+  line-height: 4;
+}
+th {
+  color: white;
+}
+th,
+td{
+  width: 300px;
+  text-align:left;
+}
+li .playbtn:hover{
+  font-size: 90px;
+}
+.detailsectop{
+  position: absolute;
+  bottom: 110px;
+  left: 40px;
+  font-size: 15px;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+  <div class="col-md-4 col col-md-4 col-lg-2 bd-content">
+    <ul class="nav flex-column" id="side-bar">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">
+            <img
+              class="title img-fluid"
+              src="assets/logos/Spotify_Logo_CMYK_White.png"
+              alt="spotify logo"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mt-2" href="#"
+            ><svg
+              width="1.5em"
+              height="2em"
+              viewBox="0 0 16 16"
+              class="bi bi-house-door mr-3 ml-1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+              /></svg>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><svg
+              width="1.5em"
+              height="2em"
+              viewBox="0 0 16 16"
+              class="bi bi-search mr-3 ml-1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+              /></svg>Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><svg
+              width="1.5em"
+              height="2em"
+              viewBox="0 0 16 16"
+              class="bi bi-bar-chart-line mr-3 ml-1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/></svg>Your Library</a>
+        </li>
+        <li class="playlist nav-item">
+          <p style="color: grey" class="ml-3 mt-4">PLAYLISTS</p>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><svg
+              width="1.5em"
+              height="2em"
+              viewBox="0 0 16 16"
+              class="bi bi-plus-square-fill mr-3 ml-1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+              /></svg>Create Playlist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><svg
+              width="1.5em"
+              height="2em"
+              viewBox="0 0 16 16"
+              class="bi bi-suit-heart-fill mr-3 ml-1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/></svg>Liked Songs</a>
+        </li>
+        <hr/>
+        <li class="nav-item">
+          <button type="button" class="btn-sign">SIGN UP</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn-login">LOGIN</button>
+        </li>
+    </ul>
+  </div>
+  
+  <div class="col-md-8 col-lg-10 bd-content" style="padding-left: 0 !important; padding-right: 0 !important;">
+  <div class="topimg">
+    <img src="https://www.eventim.de/magazin/fileadmin/_processed_/9/3/csm_maroon-5-tour-tickets-2019-1_d606d47884.jpg" class="headimg" alt="...">
+    <div class="card-img-overlay">
+      <p class="card-text detailsectop"><svg width="1em" height="1.2em" viewBox="0 0 16 16" class="bi bi-check-circle-fill mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: rgb(66, 109, 253);">
+        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+      </svg>Vertified Artist</p>
+      <h5 class="card-title texttop">Maroon 5</h5>
+      <p class="card-text detailtop">44,147,303 monthly listeners</p>
+    </div>
+  </div>
+  
+ 
+  <div class="container mt-5">
+  <ul class="nav mt-3">
+    <li class="nav-item ">
+      <i class="playbtn fas fa-play-circle" style="color:#1DB954; font-size: 70px;"></i>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light align-bottom ml-4">FOLLOW</button></a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle align-top" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px; color: rgb(189, 185, 185);">
+        ...
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Start Radio</a>
+        <a class="dropdown-item" href="#">Follow</a>
+        <a class="dropdown-item" href="#">Copy Artist Link</a>
+        <a class="dropdown-item" href="#">Open in Desktop app</a>
+      </div>
+    </li>
+  </ul>
+  <div class="row">
+    <div class="col col-md-8 col-lg-8 mb-1">
+      <h2>Popular</h2>
+      <table class="text-white">
+        <tbody>
+          <tr>
+            <th scope="row">1<img class="ml-3" src="assets/artist.images/three.jpg" style="width: 2.5rem"></th>
+            <td>Memories</td>
+            <td>949,685,758</td>
+            <td>3:09</td> 
+          </tr>
+          <tr>
+            <th scope="row">2<img class="ml-3" src="assets/artist.images/seven.jpg" style="width: 2.5rem"></th>
+            <td>Nobody's Love</td>
+            <td>74,401,423</td>
+            <td>3:31</td>
+          </tr>
+          <tr>
+            <th scope="row">3<img class="ml-3" src="assets/artist.images/four.jpg" style="width: 2.5rem"></th>
+            <td>Payphone</td>
+            <td>641,244,036</td>
+            <td>3:51</td>
+          </tr>
+          <tr>
+            <th scope="row">4<img class="ml-3" src="assets/artist.images/one.jpg" style="width: 2.5rem"></th>
+            <td>She Will Be Loved</td>
+            <td>734,988,526</td>
+            <td>4:19</td>
+          </tr>
+          <tr>
+            <th scope="row">5<img class="ml-3" src="assets/artist.images/two.jpg" style="width: 2.5rem"></th>
+            <td>Sugar</td>
+            <td>1,041,244,047</td>
+            <td>3:55</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col col-md-4 col-lg-4 mb-1">
+      <h2>Artist Pick</h2>
+      <div class="mb-3 ">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="assets/artist.images/eight.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-text"><small class="text-muted">Posted By Maroon 5</small></p>
+              <h5 class="card-title">Maroon 5 Greatest Hits</h5>
+              <p class="card-text"><small class="text-muted">Playlist</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <h2>Popular releases</h2>
+    <div class="row">
+    <div class="col col-md-4 col-lg-2 mb-1">
+    <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+      <img src="assets/artist.images/two.jpg" class="card-img-top" alt="...">
+      <p class="card-text text-white mt-3" style="font-size: 15px;">V</p>
+      <p class="text-white-50">2014 • Album</p>
+    </div>
+  </div>
+  <div class="col col-md-4 col-lg-2 mb-1">
+    <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+      <img src="assets/artist.images/five.jpg" class="card-img-top" alt="...">
+      <p class="card-text text-white mt-3" style="font-size: 15px;">Memories</p>
+      <p class="text-white-50">2019 • Album</p>
+    </div>
+  </div>
+  <div class="col col-md-4 col-lg-2 mb-1">
+    <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+      <img src="assets/artist.images/four.jpg" class="card-img-top" alt="...">
+      <p class="card-text text-white mt-3" style="font-size: 15px;">Overexposed</p>
+      <p class="text-white-50">2012 • Album</p>
+    </div>
+  </div>
+  <div class="col col-md-4 col-lg-2 mb-1">
+    <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+      <img src="assets/artist.images/one.jpg" class="card-img-top" alt="...">
+      <p class="card-text text-white mt-3" style="font-size: 15px;">Nobody's Love</p>
+      <p class="text-white-50">Latest Release Single</p>
+    </div>
+  </div>
+  <div class="col col-md-4 col-lg-2 mb-1">
+    <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+      <img src="assets/artist.images/three.jpg" class="card-img-top" alt="...">
+      <p class="card-text text-white mt-3" style="font-size: 15px;">Songs About Jane</p>
+      <p class="text-white-50">2002 • Album</p>
+    </div>
+  </div>
+  <div class="col col-md-4 col-lg-2 mb-1">
+    <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+      <img src="assets/artist.images/six.jpg" class="card-img-top" alt="...">
+      <p class="card-text text-white mt-3" style="font-size: 15px;">Red Pill Blues</p>
+      <p class="text-white-50">2018 • Album</p>
+    </div>
+  </div>
+  </div>
+    <h2>Featuring Maroon 5</h2>
+    <div class="row">
+      <div class="col col-md-4 col-lg-2 mb-1">
+      <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+        <img src="assets/artist.images/nine.jpg" class="card-img-top" alt="...">
+        <p class="card-text text-white mt-3" style="font-size: 15px;">This Is Maroon 5</p>
+        <p class="text-white-50">By Spotify</p>
+      </div>
+    </div>
+    <div class="col col-md-4 col-lg-2 mb-1">
+      <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+        <img src="assets/artist.images/ten.jpg" class="card-img-top" alt="...">
+        <p class="card-text text-white mt-3" style="font-size: 15px;">Maroon 5 Radio</p>
+        <p class="text-white-50">By Spotify</p>
+      </div>
+    </div>
+    <div class="col col-md-4 col-lg-2 mb-1">
+      <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+        <img src="assets/artist.images/mood.jpg" class="card-img-top" alt="...">
+        <p class="card-text text-white mt-3" style="font-size: 15px;">Mood Booster</p>
+        <p class="text-white-50">Get happy</p>
+      </div>
+    </div>
+    <div class="col col-md-4 col-lg-2 mb-1">
+      <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+        <img src="assets/artist.images/som.jpg" class="card-img-top" alt="...">
+        <p class="card-text text-white mt-3" style="font-size: 15px;">All Out 00s</p>
+        <p class="text-white-50">Essential tracks</p>
+      </div>
+    </div>
+    <div class="col col-md-4 col-lg-2 mb-1">
+      <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+        <img src="assets/artist.images/chill.jpg" class="card-img-top" alt="...">
+        <p class="card-text text-white mt-3" style="font-size: 15px;">Chill Hits</p>
+        <p class="text-white-50">Kick back</p>
+      </div>
+    </div>
+    <div class="col col-md-4 col-lg-2 mb-1">
+      <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+        <img src="assets/artist.images/all.jpg" class="card-img-top" alt="...">
+        <p class="card-text text-white mt-3" style="font-size: 15px;">All Out 10s</p>
+        <p class="text-white-50">Decade</p>
+      </div>
+    </div>
+    </div>
+<h2>Fans also like</h2>
+<div class="row">
+  <div class="col col-md-4 col-lg-2 mb-1">
+  <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+    <img src="assets/artist.images/fan.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+    <p class="card-text text-white mt-3" style="font-size: 15px;">One Republic</p>
+    <p class="text-white-50">Artist</p>
+  </div>
+</div>
+<div class="col col-md-4 col-lg-2 mb-1">
+  <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+    <img src="assets/artist.images/fan1.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+    <p class="card-text text-white mt-3" style="font-size: 15px;">The Script</p>
+    <p class="text-white-50">Artist</p>
+  </div>
+</div>
+<div class="col col-md-4 col-lg-2 mb-1">
+  <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+    <img src="assets/artist.images/fan2.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+    <p class="card-text text-white mt-3" style="font-size: 15px;">Sia</p>
+    <p class="text-white-50">Artist</p>
+  </div>
+</div>
+<div class="col col-md-4 col-lg-2 mb-1">
+  <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+    <img src="assets/artist.images/fan4.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+    <p class="card-text text-white mt-3" style="font-size: 15px;">Nirvana</p>
+    <p class="text-white-50">Artist</p>
+  </div>
+</div>
+<div class="col col-md-4 col-lg-2 mb-1">
+  <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+    <img src="assets/artist.images/fan3.jpg" class="card-img-top" alt="..." style="border-radius: 50%;">
+    <p class="card-text text-white mt-3" style="font-size: 15px;">Ed Sheeran</p>
+    <p class="text-white-50">Artist</p>
+  </div>
+</div>
+<div class="col col-md-4 col-lg-2 mb-1">
+  <div class="card" style="width: 10rem; background-color:rgb(27, 27, 27);">
+    <img src="assets/artist.images/fan5.jpg" class="card-img-top" alt="..."style="border-radius: 50%;">
+    <p class="card-text text-white mt-3" style="font-size: 15px;">Queen</p>
+    <p class="text-white-50">Artist</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="nowPlaying">
+        <div class="row">
+          <div class="col col-md-4 col-lg-2" id="infos">
+            <br />
+            <label class="footerText ml-2"
+              >Song Title <span class="fa fa-heart-o"></span></label
+            ><br />
+            <label class="footerText ml-2">Artist</label>
+            <br />
+          </div>
+          <div class="col-8" id="player">
+            <div style="text-align: center; margin-top: 10px">
+              <button class="btn footerIcons">
+                <span class="fa fa-random"></span>
+              </button>
+              <button class="btn footerIcons">
+                <span class="fa fa-step-backward"></span>
+              </button>
+  
+              <button class="btn footerIcons">
+                <span class="fa fa-play sf-btn-play"></span>
+              </button>
+  
+              <button class="btn footerIcons">
+                <span class="fa fa-step-forward"></span>
+              </button>
+  
+              <button class="btn footerIcons">
+                <span class="fa fa-retweet"></span>
+              </button>
+  
+              <br />
+              <div class="progress progressBar">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-4 col-lg-2" id="options">
+            <br />
+            <button class="btn footerIcons">
+              <span class="fa fa-list"></span>
+            </button>
+  
+            <button class="btn footerIcons">
+              <span class="fa fa-laptop"></span>
+            </button>
+  
+            <button class="btn footerIcons">
+              <span class="fa fa-volume-up"></span>
+            </button>
+          </div>
+        </div>
+</footer>
+    
+</body>
+</html>
