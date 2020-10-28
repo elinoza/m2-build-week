@@ -101,6 +101,11 @@ body{
      margin-left: 180px;
   }
 
+  .row img{
+    object-fit:cover;
+    height:25vh;
+  }
+
 
 
  
