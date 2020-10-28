@@ -37,8 +37,6 @@ body {
     background-color:#191414;
     z-index: 3;   
   } 
-
-
 .btn-sign,
 .btn-login,
 body{
@@ -149,14 +147,14 @@ body{
 }
 .detailtop {
   position: absolute;
-  bottom: 0px;
+  bottom: 50px;
   left: 40px;
   font-size: 15px;
   font-weight: 600;
 }
 .texttop {
   position: absolute;
-  bottom: 8px;
+  bottom: 65px;
   left: 40px;
   font-size: 80px;
 }
@@ -196,17 +194,28 @@ li .playbtn:hover{
 }
 .detailsectop{
   position: absolute;
-  bottom: 110px;
+  bottom: 150px;
   left: 40px;
   font-size: 15px;
   font-weight: 600;
 }
+.playernav{
+  position: absolute;
+  bottom: -40px;
+  left: 40px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.navsections a:hover{
+  border-bottom: solid 5px #1DB954;
+  border-radius: 0px
+}
 </style>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" id="artist">
   <div class="row flex-xl-nowrap">
-  <div class="col-md-4 col col-md-4 col-lg-2 bd-content">
+  <div class="d-none d-md-block col-md-4 col col-md-4 col-lg-2 bd-content">
     <ul class="nav flex-column" id="side-bar">
         <li class="nav-item">
           <a class="nav-link active" href="#">
@@ -318,28 +327,39 @@ li .playbtn:hover{
       </svg>Vertified Artist</p>
       <h5 class="card-title texttop">Maroon 5</h5>
       <p class="card-text detailtop">44,147,303 monthly listeners</p>
+      <ul class="playernav nav mt-3">
+        <li class="nav-item ">
+          <i class="playbtn fas fa-play-circle mb-3" style="color:#1DB954; font-size: 70px;"></i>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light align-bottom ml-4">FOLLOW</button></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle align-top" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px; color: rgb(189, 185, 185);">
+            ...
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Start Radio</a>
+            <a class="dropdown-item" href="#">Follow</a>
+            <a class="dropdown-item" href="#">Copy Artist Link</a>
+            <a class="dropdown-item" href="#">Open in Desktop app</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
   
  
   <div class="container mt-5">
-  <ul class="nav mt-3">
+  <ul class="navsections nav">
     <li class="nav-item ">
-      <i class="playbtn fas fa-play-circle" style="color:#1DB954; font-size: 70px;"></i>
+      <a class="nav-link active" href="#artist">OVERVIEW</button></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light align-bottom ml-4">FOLLOW</button></a>
+      <a class="nav-link" href="#">FANS ALSO LIKE</button></a>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle align-top" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 20px; color: rgb(189, 185, 185);">
-        ...
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Start Radio</a>
-        <a class="dropdown-item" href="#">Follow</a>
-        <a class="dropdown-item" href="#">Copy Artist Link</a>
-        <a class="dropdown-item" href="#">Open in Desktop app</a>
-      </div>
+    <li class="nav-item">
+      <a class="nav-link" href="#">ABOUT</a>
     </li>
   </ul>
   <div class="row">
