@@ -80,7 +80,7 @@ body{
   }
   .btn-sign{
     padding:4px;
-    bottom: 90px;
+    bottom: 130px;
     position: absolute;
     left: 10px;
     width: 12rem;
@@ -88,7 +88,7 @@ body{
   }
   .btn-login{
     padding:4px;
-    bottom: 50px;
+    bottom: 90px;
     position: absolute;
     left: 10px;
     width: 12rem;
