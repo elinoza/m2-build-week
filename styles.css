@@ -106,15 +106,22 @@ body{
   .main-part .card {
     align-items:center;
   }
-
+  .main-nav a:hover{
+    border-bottom: solid 5px #1DB954;
+    border-radius: 0px
+  }
   ul.main-nav  a{
-    
     background-color:transparent;
-
   }
  ul a.nav-link.active{
    background-color:transparent;
  }
+ .main-nav .nav-link.active {
+  color: #fff;
+  border-bottom: solid 5px #1DB954;
+  border-radius: 0px
+}
+
 
   .nowPlaying {
     z-index: 999;
