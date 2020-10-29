@@ -21,14 +21,13 @@ h3,h5{font-weight:bold}
 .btn-login,
 body{
   font-family:proxima-nova,sans-serif;
-  font-weight:400;
+  
   font-style: normal;
 
 }
 #side-bar.nav{
     background-color:black;
-    z-index: 3;
-      
+    z-index: 3;     
    
     position:fixed;
     top:0px;
@@ -42,7 +41,7 @@ body{
   .nav a{
     font-weight: 600;
     color: rgb(158, 158, 158);
-    font-size: 13px;
+    font-size: 15px;
   }
   
   .title{
