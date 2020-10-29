@@ -28,7 +28,7 @@ body{
 #side-bar.nav{
     background-color:black;
     z-index: 3;
-    width: 250px;
+    
     position:fixed;
     top:0px;
     left:0px;
@@ -95,13 +95,11 @@ body{
     background-color: black;
     color: white;
   }
+ 
 
-
-  
 
   .main-part .row img{
-    object-fit:cover;
-    
+    object-fit:cover;    
    
   }
 
@@ -109,19 +107,14 @@ body{
     align-items:center;
   }
 
-
-  
-img:hover{
- 
+  ul.main-nav  a{
     
-  background-color:white;
+    background-color:transparent;
 
-}
-
-
-
- 
-
+  }
+ ul a.nav-link.active{
+   background-color:transparent;
+ }
 
   .nowPlaying {
     z-index: 999;
@@ -145,4 +138,3 @@ img:hover{
     margin-left: 80px;
     margin-right: 80px;
   }
-
