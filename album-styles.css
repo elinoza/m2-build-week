@@ -174,8 +174,7 @@ ul.tracklist a:active{
 img:hover{
   transform:scale(1.1);
   transition:0.2s;
-  box-shadow: 100px 10px 5px white;
-}
+  }
 
 
 
