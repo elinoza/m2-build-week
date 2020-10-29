@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 body {
   background:rgb(18,33,52);
@@ -104,8 +103,16 @@ body{
   .main-part .card {
     align-items:center;
   }
+  .main-nav a:hover{
+    border-bottom: solid 5px #1DB954;
+    border-radius: 0px
+  }
 
-
+ .main-nav .nav-link.active {
+  color: #fff;
+  border-bottom: solid 5px #1DB954;
+  border-radius: 0px
+}
 
 
   .nowPlaying {
