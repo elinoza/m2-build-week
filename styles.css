@@ -105,14 +105,8 @@ body{
     align-items:center;
   }
 
-  ul.main-nav  a{
-    
-    background-color:transparent;
 
-  }
- ul a.nav-link.active{
-   background-color:transparent;
- }
+
 
   .nowPlaying {
     z-index: 999;
