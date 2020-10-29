@@ -202,9 +202,28 @@ img:hover{
     background-color: #272727;
     color: white;
   }
-  .progressBar {
-    height: 0.2rem;
-    margin-left: 80px;
-    margin-right: 80px;
+
+  
+@media only screen and (max-width: 1250px) {
+  #options {
+    display: none;
   }
+}
+@media only screen and (max-width: 900px) {
+  #infos {
+    display: none;
+  }
+}
+.progressBar {
+  height: 0.2rem;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+footer {
+  max-height: 70px;
+}
+
+#player {
+  width: 900px;
+}
 

@@ -85,7 +85,7 @@ li a:active {
   bottom: 130px;
   position: absolute;
   left: 10px;
-  width: 12rem;
+  width: 10rem;
   background-color: white;
 }
 .btn-login {
@@ -93,7 +93,7 @@ li a:active {
   bottom: 90px;
   position: absolute;
   left: 10px;
-  width: 12rem;
+  width: 10rem;
   background-color: black;
   color: white;
 }
@@ -143,7 +143,7 @@ footer {
 }
 
 #player {
-  width: 900px;
+  width: 600px;
 }
 
 .card:hover {
