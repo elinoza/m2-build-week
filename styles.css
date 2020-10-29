@@ -97,13 +97,16 @@ body{
   }
 
 
-  .main-part {
-     margin-left: 180px;
-  }
+  
 
   .row img{
     object-fit:cover;
-    height:25vh;
+    width:80%;
+   
+  }
+
+  .main-part .card {
+    align-items:center;
   }
 
 
