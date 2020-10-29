@@ -18,10 +18,8 @@ h3,h5{font-weight:bold}
 .btn-sign,
 .btn-login,
 body{
-    font-family: 'Cabin', sans-serif;
-    font-weight: 600;
-    
-
+  font-family:proxima-nova,sans-serif;
+  font-weight: 600;
   font-style: normal;
 
 }
