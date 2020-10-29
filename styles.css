@@ -99,9 +99,9 @@ body{
 
   
 
-  .row img{
+  .main-part .row img{
     object-fit:cover;
-    width:80%;
+    
    
   }
 
