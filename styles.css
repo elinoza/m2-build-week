@@ -137,3 +137,15 @@ body{
     margin-left: 80px;
     margin-right: 80px;
   }
+  footer{ 
+    max-height: 70px;
+  }
+
+  #player {
+    width: 900px;
+  }
+
+  .card:hover{
+    transform:scale(1.1);
+    transition:0.2s
+  }
