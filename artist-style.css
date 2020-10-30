@@ -342,3 +342,35 @@ body{
   footer {
     max-height: 70px;
   }
+
+  div.nav-item.hamburger-menu i{
+ 
+    color: white;
+    background-color: rgb(36, 36, 36);
+    padding: 10px;
+    
+    pointer-events:none;
+   
+  }
+  
+  div.nav-item.hamburger-menu a{
+    color:white;
+    
+  }
+  
+  div.dropdown-menu {
+    background-color:rgb(36, 36, 36);
+    
+  }
+  
+  
+  
+  div.nav-item.hamburger-menu {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index:99999;
+    position:sticky;
+  
+  
+  }
