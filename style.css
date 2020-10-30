@@ -130,6 +130,7 @@
 
 }
 
+.form-check {}
 
 
 
@@ -156,6 +157,7 @@
 .footer a {
     color: #1db954
 }
+
 
 
 input[type="checkbox"]+label {
