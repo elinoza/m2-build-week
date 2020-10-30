@@ -142,22 +142,11 @@ footer {
   max-height: 70px;
 }
 
-#player {
-  width: 600px;
-}
+
 
 .card:hover {
   transform: scale(1.1);
   transition: 0.2s;
 }
 
-@media only screen and (max-width: 1250px) {
-  #options {
-    display: none;
-  }
-}
-@media only screen and (max-width: 900px) {
-  #infos {
-    display: none;
-  }
-}
+
