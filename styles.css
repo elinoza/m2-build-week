@@ -85,12 +85,12 @@ div.nav-item.hamburger-menu {
   margin-left: 9px;
 }
 
-li a:hover {
+.navbar-title li a:hover {
  transform: scale(1.1);
   transition: 0.2s;
 }
 
-li a:active {
+.navbar-title li a:active {
   background-color: rgba(128, 128, 128, 0.336);
   border-radius: 10px;
 }
