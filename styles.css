@@ -1,11 +1,6 @@
 body {
-  background: rgb(18, 33, 52);
-  background: linear-gradient(
-    90deg,
-    rgba(36, 69, 108, 1) 8%,
-    rgba(18, 33, 52, 1) 98%,
-    rgba(5, 10, 16, 1) 100%
-  );
+  background-image: url(https://themeccagym.com/wp-content/uploads/2019/09/black-gradient-background.png);
+  background-repeat: round;
   font-size: 14px;
   color: white;
 }
