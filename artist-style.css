@@ -212,7 +212,7 @@ body{
   .playbtn{
     display: none !important;
   }
-  .cadr-img-top:hover + .playbtn{
+  .card:hover i.playbtn{
     display: block !important;
     transition: 0.5s;
   }
@@ -222,8 +222,8 @@ body{
   
   .row .playbtn {
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 45%;
+    left: 72%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     color: #1DB954;
