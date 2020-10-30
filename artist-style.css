@@ -232,6 +232,30 @@ body{
     cursor: pointer;
     text-align: center;
   }
+  .heartbtn{
+    display: none !important;
+  }
+  .card:hover i.heartbtn{
+    display: block !important;
+    transition: 0.5s;
+  }
+  .card-img-top:hover{
+    opacity: 0.4;
+  }
+  
+  .row .heartbtn {
+    position: absolute;
+    top: 36%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: grey;
+    opacity: 0.7;
+    font-size: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
   #title{
         position: absolute;
         top: 23%;
