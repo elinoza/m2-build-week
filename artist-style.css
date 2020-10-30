@@ -9,8 +9,25 @@ body {
     z-index: 3;   
 } 
 .popular tbody tr:hover{
-    background-color: whitesmoke ;
+    opacity: 0.6;
+    transition: ease-out;
+    background-color: rgb(26, 26, 26);
+    border-radius: 15px;
 }
+.card-body{
+    padding: 0.25rem;
+}
+.card-text{
+    font-size: 13px;
+}
+p{
+    line-height: 0.7 !important;
+}
+.mt-3,
+-my-3{
+    margin-top:0.95rem !important;
+}
+
 .btn-sign,
 .btn-login,
 body{
@@ -370,7 +387,10 @@ body{
     top: 40px;
     left: 20px;
     z-index:99999;
-    position:sticky;
+    position:sticky;}
   
   
+  table.popular tbody tr:hover{
+      transform: scale(1.1) !important;
+      background-color: none !important;
   }
