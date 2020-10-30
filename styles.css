@@ -20,6 +20,7 @@ h5 {
   z-index: 3;
 }
 
+
 .btn-sign,
 .btn-login,
 body {
@@ -30,7 +31,6 @@ body {
 #side-bar.nav {
   background-color: black;
   z-index: 3;
-
   position: fixed;
   top: 0px;
   left: 0px;
@@ -46,6 +46,42 @@ body {
   font-size: 15px;
 }
 
+div.nav-item.hamburger-menu i{
+ 
+  color: white;
+  background-color: rgb(36, 36, 36);
+  padding: 10px;
+  
+  pointer-events:none;
+ 
+}
+
+div.nav-item.hamburger-menu a{
+  color:white;
+  
+}
+
+div.dropdown-menu {
+  background-color:rgb(36, 36, 36);
+  
+}
+
+
+
+div.nav-item.hamburger-menu {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  z-index:99999;
+  position:sticky;
+
+
+}
+
+
+
+
+
 .title {
   box-sizing: border-box;
   width: 135px;
@@ -55,8 +91,8 @@ body {
 }
 
 li a:hover {
-  color: white;
-  transition: 0.5s ease-in-out;
+ transform: scale(1.1);
+  transition: 0.2s;
 }
 
 li a:active {
