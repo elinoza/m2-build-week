@@ -69,9 +69,14 @@
     background-color: #15883e;
 }
 
-.btn-green:hover {
+.btn-green:hover  {
     color: #fff;
     background-color: #1db954;
+}
+
+.btn-green a{
+    color: white;
+    text-decoration: none;
 }
 
 .btn-sign {
